@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DAC3ABEC-6177-45EF-90D9-6C9E41A48EB0}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleApp</RootNamespace>
+    <AssemblyName>ConsoleApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connectors\G1GamesScraping.cs" />
+    <Compile Include="Helper\CasperJsHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="casperjs\bin\casperjs" />
+    <None Include="casperjs\node_modules\casperjs-better-download\.editorconfig" />
+    <None Include="casperjs\node_modules\casperjs-better-download\.gitattributes" />
+    <None Include="casperjs\node_modules\casperjs-better-download\.jshintrc" />
+    <None Include="casperjs\node_modules\casperjs-better-download\package.json" />
+    <None Include="casperjs\node_modules\casperjs-better-download\readme.md" />
+    <None Include="casperjs\package.json" />
+    <None Include="casperjs\rpm\build" />
+    <None Include="casperjs\rpm\casperjs.spec" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="casperjs\bin\bootstrap.js" />
+    <Content Include="casperjs\bin\casperjs.exe" />
+    <Content Include="casperjs\bin\casperjs.js" />
+    <Content Include="casperjs\bin\jquery.js" />
+    <Content Include="casperjs\bin\g1GameCrawl.js" />
+    <Content Include="casperjs\bin\phantomjs.exe" />
+    <Content Include="casperjs\bin\usage.txt" />
+    <Content Include="casperjs\modules\casper.js" />
+    <Content Include="casperjs\modules\cli.js" />
+    <Content Include="casperjs\modules\clientutils.js" />
+    <Content Include="casperjs\modules\colorizer.js" />
+    <Content Include="casperjs\modules\events.js" />
+    <Content Include="casperjs\modules\http.js" />
+    <Content Include="casperjs\modules\mouse.js" />
+    <Content Include="casperjs\modules\pagestack.js" />
+    <Content Include="casperjs\modules\querystring.js" />
+    <Content Include="casperjs\modules\tester.js" />
+    <Content Include="casperjs\modules\utils.js" />
+    <Content Include="casperjs\modules\xunit.js" />
+    <Content Include="casperjs\node_modules\casperjs-better-download\index.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
