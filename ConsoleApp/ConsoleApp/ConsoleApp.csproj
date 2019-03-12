@@ -64,13 +64,12 @@
     <None Include="casperjs\rpm\casperjs.spec" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="casperjs\bin\bootstrap.js" />
     <Content Include="casperjs\bin\casperjs.exe" />
     <Content Include="casperjs\bin\casperjs.js" />
-    <Content Include="casperjs\bin\jquery.js" />
     <Content Include="casperjs\bin\g1GameCrawl.js" />
+    <Content Include="casperjs\bin\jquery.js" />
     <Content Include="casperjs\bin\phantomjs.exe" />
     <Content Include="casperjs\bin\usage.txt" />
     <Content Include="casperjs\modules\casper.js" />
